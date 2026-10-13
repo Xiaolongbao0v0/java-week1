@@ -9,5 +9,4 @@ public class LeapYear {
             System.out.println("这是闰年");
         } else System.out.println("这不是闰年");
     }
-    
 }
