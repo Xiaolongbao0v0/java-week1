@@ -7,11 +7,11 @@ public class OddEven {
         //偶数除以2余数为o，奇数除以2余数为1.
         Scanner in = new Scanner(System.in);
         int num = in.nextInt();
-        if (num%2==0){
-            System.out.println( num+"是偶数");}
-        else{
-            System.out.println( num+"是奇数");
-
+        if (num % 2 == 0) {
+            System.out.println(num + "是偶数");
+        } else {
+            System.out.println(num + "是奇数");
+            in.close();
         }
     }
 }
