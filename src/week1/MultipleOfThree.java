@@ -1,3 +1,5 @@
+package week1;
+
 public class MultipleOfThree {
     public static void main(String[] args) {
         int count = 0;
