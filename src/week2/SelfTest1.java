@@ -7,7 +7,7 @@ public class SelfTest1 {
 
     public static void main(String[] args) {
         int[] year = {2000, 1900, 2024, 2023};
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < year.length; i++) {
             if (isLeapYear(year[i])) {
                 System.out.println(year[i] + "是闰年");
             }else{
