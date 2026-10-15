@@ -11,4 +11,10 @@ public class Student {
         }
         return (double) sum / scores.length;
     }
+
+    public boolean isPass() {
+        return average() >= 60;
+        // 平均分 >= 60 返回 true，否则 false
+    }
+
 }
