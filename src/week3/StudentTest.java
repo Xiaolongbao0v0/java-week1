@@ -2,18 +2,22 @@ package week3;
 
 public class StudentTest {
     public static void main(String[] args) {
-        Student zhangsan = new Student();          // new = 造一个具体的学生
-        zhangsan.name = "张三";
-        zhangsan.scores = new int[]{85,92,78};
+        Student[] students = new Student[3];      // 先造一个能装 3 个学生的数组
 
-        Student lisi = new Student();
-        lisi.name = "李四";
-        lisi.scores = new int[]{60, 70, 65};
+        students[0] = new Student();              // ← 关键，别漏
+        students[0].name = "张三";
+        students[0].scores = new int[]{85, 92, 78};
 
-        System.out.println(zhangsan.name + "的平均分：" + zhangsan.average());
-        System.out.println(zhangsan.name + "及格了吗：" + zhangsan.isPass());
-        System.out.println(lisi.name + "的平均分：" + lisi.average());
-        System.out.println(lisi.name + "及格了吗：" + lisi.isPass());
+        students[1] = new Student();
+        students[1].name = "李四";
+        students[1].scores = new int[]{60, 70, 65};
 
+        students[2] = new Student();
+        students[2].name = "王五";
+        students[2].scores = new int[]{50, 55, 52};
+
+        for (int i = 0; i < students.length; i++) {
+            students[i].printInfo();              // 循环里调方法
+        }
     }
 }

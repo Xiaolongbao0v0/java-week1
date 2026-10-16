@@ -14,7 +14,11 @@ public class Student {
 
     public boolean isPass() {
         return average() >= 60;
-        // 平均分 >= 60 返回 true，否则 false
     }
+
+    public void printInfo() {
+        System.out.println(name + " " + average() + " " + (isPass() ? "及格" : "不及格"));
+    }
+
 
 }
