@@ -41,6 +41,11 @@ public class Student {
         }
         this.scores = scores;
     }
+    public Student(String name, int[] scores) {
+        this.name = name;
+        setScores(scores);
+    }
+
 
 
 }
