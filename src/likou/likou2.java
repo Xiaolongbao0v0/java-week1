@@ -6,8 +6,8 @@ public class likou2 {
         // 测试表格：换成你自己表格里的值
         int[] cases = {500, 1000, 1234, 5678, 9999, 10000};
 
-        for (int n : cases) {
-            Password p = new Password(n);
+        for (int i = 0; i < cases.length; i++)  {
+            Password p = new Password(cases[i]);     // 用下标取出表格里的值
             System.out.println(p.shu + " → " + p.check());
         }
     }
