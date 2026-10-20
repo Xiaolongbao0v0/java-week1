@@ -3,27 +3,12 @@ package likou;
 public class likou2 {
 
     public static void main(String[] args) {
-        // 测试表格：cases 是输入值，expected 是对应的期望结果
-        // （换成你自己表格里的值，两组个数要一一对应）
+        // 测试表格：换成你自己表格里的值
         int[] cases = {500, 1000, 1234, 5678, 9999, 10000};
-        String[] expected = {
-                "输入无效，要求整数范围{1000-9999}",
-                "密码无效",
-                "密码无效",
-                "密码有效",
-                "密码有效",
-                "输入无效，要求整数范围{1000-9999}"
-        };
 
-        for (int i = 0; i < cases.length; i++) {
-            Password p = new Password(cases[i]);       // 用表格里的值造对象
-            String actual = p.check();                 // 实际结果
-            boolean pass = expected[i].equals(actual);  // 字符串比内容必须用 equals
-
-            System.out.println(cases[i]
-                    + " | 期望：" + expected[i]
-                    + " | 实际：" + actual
-                    + " | " + (pass ? "通过" : "★失败"));
+        for (int n : cases) {
+            Password p = new Password(n);
+            System.out.println(p.shu + " → " + p.check());
         }
     }
 }
