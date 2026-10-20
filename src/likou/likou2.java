@@ -1,27 +1,25 @@
 package likou;
 
-import java.util.Scanner;
-
 public class likou2 {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("请输入一个数字：");
-        int n = in.nextInt();
+        int[] cases = {500, 1000, 1234, 5678, 9999, 10000};
 
-        Password p = new Password(n);
-        System.out.println(p.shuzi());
+        for (int n : cases) {
+            Password p = new Password(n);
+            System.out.println(p.shu + " → " + p.check());
+        }
     }
 }
 
 class Password {
-    private int shu;
+    int shu;
 
     public Password(int shu) {
         this.shu = shu;
     }
 
-    public String shuzi() {
+    public String check() {
         if (shu < 1000 || shu > 9999) {
             return "输入无效，要求整数范围{1000-9999}";
         }
