@@ -1,4 +1,4 @@
-package week5;
+package week5.book;
 
 /**
  * 图书类：描述一本书

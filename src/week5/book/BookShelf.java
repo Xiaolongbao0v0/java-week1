@@ -1,4 +1,4 @@
-package week5;
+package week5.book;
 
 /**
  * 书架工具类：提供一批操作整个书架的静态方法
