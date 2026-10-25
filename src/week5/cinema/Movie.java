@@ -23,21 +23,39 @@ package week5.cinema;
  *       返回 price * sold（本场已经卖出的票房总额）。
  */
 public class Movie {
+    String name;
+    int price;
+    int seats;
+    int sold;
+
 
     // ===== 在这里写字段 =====
 
-
+    public Movie(String name,int price,int seats){
+        this.name = name;
+        this.price = price;
+        this.seats = seats;
+    }
 
     // ===== 构造方法 =====
+    boolean sell(int n){
+        if (sold + n > seats){
+            return false;
+        }else {
+            sold += n;                      //？？
+            return true;}
+        }
 
 
 
     // ===== sell：尝试卖 n 张，不够就返回 false =====
-
-
-
+    boolean soldOut(){
+    return sold == seats;
+    }
     // ===== soldOut：是否售罄 =====
-
+    int boxOffice(){
+    return price*sold;
+    }
 
 
     // ===== boxOffice：本场票房 =====
